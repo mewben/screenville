@@ -142,6 +142,8 @@ add_action( 'widgets_init', 'screenville_widgets_init' );
 function screenville_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
+	wp_enqueue_style('foundation', get_template_directory_uri() . '/foundation/stylesheets/foundation.min.css');
+	wp_enqueue_style('foundation-app', get_template_directory_uri() . '/foundation/stylesheets/app.css');
 	wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
